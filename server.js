@@ -3,7 +3,6 @@ const cors = require('cors');
 
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
-const  helmet = require('helmet');
 const fileUpload = require('express-fileupload')
 const path = require('path')
 
@@ -25,7 +24,6 @@ const orderRoute = require(`./route/orderRoute`)
 //configaration
 app.use(cors());
 app.use(cookieParser(process.env.REF_TOKEN_SECRET));
-app.use(helmet());
 app.use(fileUpload({
     useTempFiles: true
 }))
